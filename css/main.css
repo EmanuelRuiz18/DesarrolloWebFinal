@@ -26,9 +26,8 @@ main .flexDerecha {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   gap: 100px;
 }
 
@@ -46,9 +45,8 @@ main .flexIzquierda {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   gap: 100px;
 }
 
@@ -142,7 +140,7 @@ footer a {
 
 footer a:hover {
   color: rgba(0, 0, 0, 0.8);
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 
 .nombreEmpresa {
@@ -154,7 +152,7 @@ footer a:hover {
   font-size: small;
 }
 
-/* Maps */
+/* Ejemplo de maps */
 .icon__red-tw {
   color: #1dcaff;
 }
@@ -178,4 +176,16 @@ footer a:hover {
 .icon__red-snap {
   color: yellow;
 }
+
+/* Ejemplo de Mixins */
+/* @mixin btn {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid;
+}
+.btnDanger {
+    @include btn;
+    background-color: red;
+}
+ */
 /*# sourceMappingURL=main.css.map */

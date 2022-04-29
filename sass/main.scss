@@ -1,7 +1,20 @@
-/* $textoFooter: #fff;
 $paddingContenido: 0 20px 0 20px;
 $marginContenido: 30px 0 30px 0;
- */
+
+$colores: (
+    nombreEmpresa: #a6aaaa,
+    bgNombreEmpresa: #2b2b2b,
+    bgHover: #f3f3f3,
+    textoFooter: #fff,
+    bgFooter: #1b2c4b
+    );
+
+@mixin flexLaterales {
+    display: flex;
+    align-content: center;
+    gap: 100px;
+}
+    
 .imgLogo {
     padding-left: 50px;
 }
@@ -24,9 +37,7 @@ main {
     margin: $marginContenido;
     padding: $paddingContenido;
     .flexDerecha {
-        display: flex;
-        align-items: center;
-        gap: 100px;
+        @include flexLaterales;
         p {
             position: static;
             text-align: justify;
@@ -37,9 +48,7 @@ main {
         }
     }
     .flexIzquierda {
-        display: flex;
-        align-items: center;
-        gap: 100px;
+        @include flexLaterales;
         p {
             position: static;
             margin-left: 30px;
@@ -76,7 +85,7 @@ footer {
     align-items: center;
     margin-top: 30px;
     background-color: map-get($map: $colores, $key: bgFooter);
-    color: map-get($map: $colores, $key: textoFooter);
+    color: map-get($map:$colores, $key: textoFooter);
     font-weight: 500;
     font-size: large;
     p {
@@ -89,23 +98,23 @@ footer {
     }
     a {
         text-decoration: none;
-        color: map-get($map: $colores, $key: textoFooter);
+        color: map-get($map:$colores, $key: textoFooter);
     }
     a:hover {
         color: rgba(0, 0, 0, 0.8);
-        background-color: map-get($map: $colores, $key: bgHover);
+        background-color: map-get($map:$colores, $key: bgHover);
     }
 }
 .nombreEmpresa {
     text-align: center;
-    background-color: map-get($map: $colores, $key: bgNombreEmpresa);
+    background-color: map-get($map:$colores, $key: bgNombreEmpresa);
     padding: 20px 0 10px 0;
     color: map-get($map:$colores, $key: nombreEmpresa);
     font-weight: 400;
     font-size: small;
 }
 
-/* Maps */
+/* Ejemplo de maps */
 
 $red-social: (
     tw: rgb(29, 202, 255),
@@ -120,10 +129,15 @@ $red-social: (
         color: $valor;
     }
 }
-$colores: (
-    nombreEmpresa: #a6aaaa,
-    bgNombreEmpresa: #2b2b2b,
-    bgHover: #f3f3f3,
-    textoFooter: #fff,
-    bgFooter: #1b2c4b
-);
+/* Ejemplo de Mixins */
+
+/* @mixin btn {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid;
+}
+.btnDanger {
+    @include btn;
+    background-color: red;
+}
+ */
