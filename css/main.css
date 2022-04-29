@@ -18,7 +18,7 @@
 }
 
 main {
-  margin: 20px 0px 20px 0px;
+  margin: 30px 0 30px 0;
   padding: 0 20px 0 20px;
 }
 
@@ -114,7 +114,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: #1b2c4b;
   color: #fff;
   font-weight: 500;
@@ -152,5 +152,30 @@ footer a:hover {
   color: #a6aaaa;
   font-weight: 400;
   font-size: small;
+}
+
+/* Maps */
+.icon__red-tw {
+  color: #1dcaff;
+}
+
+.icon__red-fb {
+  color: #0044aa;
+}
+
+.icon__red-ig {
+  color: #b423b4;
+}
+
+.icon__red-ln {
+  color: darkblue;
+}
+
+.icon__red-tt {
+  color: black;
+}
+
+.icon__red-snap {
+  color: yellow;
 }
 /*# sourceMappingURL=main.css.map */
