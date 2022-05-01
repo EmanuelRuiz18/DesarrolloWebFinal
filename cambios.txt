@@ -1,0 +1,5 @@
+
+
+Se agregan mixins en flexbox laterales en archivo index.html
+Se agrega maps de colores para las fuentes en archivo index.html
+Se agregaron keywords y descripciones en cada uno de los archivos
