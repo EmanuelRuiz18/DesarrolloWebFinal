@@ -1,5 +1,6 @@
 $paddingContenido: 0 20px 0 20px;
 $marginContenido: 30px 0 30px 0;
+$marginContacto: 20px 0 20px 0;
 
 $colores: (
     nombreEmpresa: #a6aaaa,
@@ -189,7 +190,7 @@ $red-social: (
             grid-area: tarjeta12;
         }
 }
-@media (max-width: 760px ) {
+@media (max-width: 770px ) {
     .galeriaServicios {
         display: grid;
         grid-template-areas:    "tarjeta1 tarjeta2"
@@ -236,5 +237,217 @@ $red-social: (
             .tarjeta12 {
                 grid-area: tarjeta12;
             }
+    }    
+}
+.galeriaProductos {
+    display: grid;
+    grid-template-areas:    "item1 item2 item3"
+                            "item4 item5 item6"
+                            "item7 item8 item9";
+    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+        .item1 {
+            grid-area: item1;
+            img {
+                width: 250px;
+            }
+        }
+        .item2 {
+            grid-area: item2;
+            img {
+                width: 250px;
+            }
+        }
+        .item3 {
+            grid-area: item3;
+            img {
+                width: 250px;
+            }
+        }
+        .item4 {
+            grid-area: item4;
+            img {
+                width: 200px;
+            }
+        }
+        .item5 {
+            grid-area: item5;
+            img {
+                width: 250px;
+            }
+        }
+        .item6 {
+            grid-area: item6;
+            img {
+                width: 250px;
+            }
+        }
+        .item7 {
+            grid-area: item7;
+            img {
+                width: 250px;
+            }
+        }
+        .item8 {
+            grid-area: item8;
+            img {
+                width: 250px;
+            }
+        }
+        .item9 {
+            grid-area: item9;
+            img {
+                width: 250px;
+            }
+        }
+}
+@media (max-width: 770px) {
+    .galeriaProductos {
+        grid-template-areas: "item1 item2"
+                                "item3 item4"
+                                "item5 item6"
+                                "item7 item8"
+                                "item9 item9";
+        grid-template-rows: repeat(5, 250px);
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        gap: 10px;
+        .item1 {
+            grid-area: item1;
+            img {
+                width: 200px;
+            }
+        }
+        .item2 {
+            grid-area: item2;
+            img {
+                width: 200px;
+            }
+        }
+        .item3 {
+            grid-area: item3;
+            img {
+                width: 200px;
+            }
+        }
+        .item4 {
+            grid-area: item4;
+            img {
+                width: 150px;
+            }
+        }
+        .item5 {
+            grid-area: item5;
+            img {
+                width: 200px;
+            }
+        }
+        .item6 {
+            grid-area: item6;
+            img {
+                width: 200px;
+            }
+        }
+        .item7 {
+            grid-area: item7;
+            img {
+                width: 200px;
+            }
+        }
+        .item8 {
+            grid-area: item8;
+            img {
+                width: 200px;
+            }
+        }
+        .item9 {
+            grid-area: item9;
+            img {
+                width: 200px;
+            }
+        }
+    }
+}
+@mixin formulario {
+    margin: $marginContacto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorContacto {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    p {
+        text-align: center;
+    }
+    .formulario {
+        input {
+            width: 300px;
+        }
+        form {
+            .formItem1 {
+                @include formulario;
+            }
+            .formItem2 {
+                @include formulario;
+            }
+            .formItem3 {
+                @include formulario;
+            }
+            .formItem4 {
+                @include formulario;
+            }
+            .formItem5 {
+                @include formulario;
+            }
+        }
+    }
+}
+@media (max-width:770px) {  /* Revisar para mobile */
+    .contenedorContacto {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-evenly;
+        iframe {
+            width: 100%;    /* Revisar para mobile */
+        }
+        p {
+            text-align: center;
+        }
+        p:nth-child(1) {
+            font-size: larger;
+        }
+        .formulario {
+            input {
+                width: 300px;
+            }
+            form {
+                .formItem1 {
+                    @include formulario;
+                }
+                .formItem2 {
+                    @include formulario;
+                }
+                .formItem3 {
+                    @include formulario;
+                }
+                .formItem4 {
+                    @include formulario;
+                }
+                .formItem5 {
+                    @include formulario;
+                }
+            }
+        }
     }    
 }

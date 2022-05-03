@@ -280,7 +280,7 @@ footer a:hover {
   grid-area: tarjeta12;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 770px) {
   .galeriaServicios {
     display: -ms-grid;
     display: grid;
@@ -348,6 +348,394 @@ footer a:hover {
     -ms-grid-row: 6;
     -ms-grid-column: 2;
     grid-area: tarjeta12;
+  }
+}
+
+.galeriaProductos {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "item1 item2 item3" "item4 item5 item6" "item7 item8 item9";
+  -ms-grid-rows: (300px)[3];
+      grid-template-rows: repeat(3, 300px);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  gap: 10px;
+}
+
+.galeriaProductos .item1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: item1;
+}
+
+.galeriaProductos .item1 img {
+  width: 250px;
+}
+
+.galeriaProductos .item2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: item2;
+}
+
+.galeriaProductos .item2 img {
+  width: 250px;
+}
+
+.galeriaProductos .item3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: item3;
+}
+
+.galeriaProductos .item3 img {
+  width: 250px;
+}
+
+.galeriaProductos .item4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: item4;
+}
+
+.galeriaProductos .item4 img {
+  width: 200px;
+}
+
+.galeriaProductos .item5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: item5;
+}
+
+.galeriaProductos .item5 img {
+  width: 250px;
+}
+
+.galeriaProductos .item6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: item6;
+}
+
+.galeriaProductos .item6 img {
+  width: 250px;
+}
+
+.galeriaProductos .item7 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: item7;
+}
+
+.galeriaProductos .item7 img {
+  width: 250px;
+}
+
+.galeriaProductos .item8 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: item8;
+}
+
+.galeriaProductos .item8 img {
+  width: 250px;
+}
+
+.galeriaProductos .item9 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: item9;
+}
+
+.galeriaProductos .item9 img {
+  width: 250px;
+}
+
+@media (max-width: 770px) {
+  .galeriaProductos {
+        grid-template-areas: "item1 item2" "item3 item4" "item5 item6" "item7 item8" "item9 item9";
+    -ms-grid-rows: (250px)[5];
+        grid-template-rows: repeat(5, 250px);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    gap: 10px;
+  }
+  .galeriaProductos .item1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: item1;
+  }
+  .galeriaProductos .item1 img {
+    width: 200px;
+  }
+  .galeriaProductos .item2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: item2;
+  }
+  .galeriaProductos .item2 img {
+    width: 200px;
+  }
+  .galeriaProductos .item3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: item3;
+  }
+  .galeriaProductos .item3 img {
+    width: 200px;
+  }
+  .galeriaProductos .item4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: item4;
+  }
+  .galeriaProductos .item4 img {
+    width: 150px;
+  }
+  .galeriaProductos .item5 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: item5;
+  }
+  .galeriaProductos .item5 img {
+    width: 200px;
+  }
+  .galeriaProductos .item6 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: item6;
+  }
+  .galeriaProductos .item6 img {
+    width: 200px;
+  }
+  .galeriaProductos .item7 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: item7;
+  }
+  .galeriaProductos .item7 img {
+    width: 200px;
+  }
+  .galeriaProductos .item8 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: item8;
+  }
+  .galeriaProductos .item8 img {
+    width: 200px;
+  }
+  .galeriaProductos .item9 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: item9;
+  }
+  .galeriaProductos .item9 img {
+    width: 200px;
+  }
+}
+
+.contenedorContacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contenedorContacto p {
+  text-align: center;
+}
+
+.contenedorContacto .formulario input {
+  width: 300px;
+}
+
+.contenedorContacto .formulario form .formItem1 {
+  margin: 20px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedorContacto .formulario form .formItem2 {
+  margin: 20px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedorContacto .formulario form .formItem3 {
+  margin: 20px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedorContacto .formulario form .formItem4 {
+  margin: 20px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedorContacto .formulario form .formItem5 {
+  margin: 20px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 770px) {
+  /* Revisar para mobile */
+  .contenedorContacto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contenedorContacto iframe {
+    width: 100%;
+    /* Revisar para mobile */
+  }
+  .contenedorContacto p {
+    text-align: center;
+  }
+  .contenedorContacto p:nth-child(1) {
+    font-size: larger;
+  }
+  .contenedorContacto .formulario input {
+    width: 300px;
+  }
+  .contenedorContacto .formulario form .formItem1 {
+    margin: 20px 0 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedorContacto .formulario form .formItem2 {
+    margin: 20px 0 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedorContacto .formulario form .formItem3 {
+    margin: 20px 0 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedorContacto .formulario form .formItem4 {
+    margin: 20px 0 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedorContacto .formulario form .formItem5 {
+    margin: 20px 0 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
