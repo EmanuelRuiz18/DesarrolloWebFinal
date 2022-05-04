@@ -351,6 +351,10 @@ footer a:hover {
   }
 }
 
+.tituloMarcas {
+  text-align: center;
+}
+
 .galeriaProductos {
   display: -ms-grid;
   display: grid;
