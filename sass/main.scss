@@ -1,7 +1,10 @@
 $paddingContenido: 0 20px 0 20px;
-$marginContenido: 30px 0 30px 0;
+$marginContenido: 40px 0 40px 0;
 $marginContacto: 20px 0 20px 0;
 
+.textoDestacado {
+    font-size: large;
+}
 $colores: (
     nombreEmpresa: #a6aaaa,
     bgNombreEmpresa: #2b2b2b,
@@ -42,13 +45,14 @@ main {
     padding: $paddingContenido;
     .flexDerecha {
         @include flexLaterales;
+        flex-direction: row-reverse;
         p {
             position: static;
             text-align: justify;
+            margin-right: 30px;
         }
         p:nth-child(2){
-            width: 440px;
-            margin-right: 30px;
+            position: static;
         }
     }
     .flexIzquierda {
@@ -69,10 +73,46 @@ main {
     align-items: center;
     margin: $marginContenido;
     padding: $paddingContenido;
+    div:nth-child(1) {
+        padding-bottom: 15px;
+    }
     .testimonios {
         display: flex;
         align-items: center;
         gap: 40px;
+    }
+}
+@mixin flexColumn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media (max-width: 770px) {     /* Página NOSOTROS */
+    p, h1, h2, h3 {
+        text-align: center;
+    }
+    .flexDerecha {
+        @include flexColumn;
+        padding: 0;
+        gap: 30px;
+        flex-direction: column-reverse;
+    }
+    .flexIzquierda {
+        @include flexColumn;
+        padding: 0;
+        gap: 30px;
+    }
+    .testimonios {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: $marginContenido;
+        padding: $paddingContenido;
+        .nombreCliente {
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: bold;
+        }
     }
 }
 .widget2 {
@@ -153,6 +193,57 @@ $red-social: (
                             "tarjeta10 tarjeta11 tarjeta12";
     justify-content: space-around;
     gap: 20px;
+    .card-text {
+        text-align: center;
+    }
+    .tarjeta1 {
+        grid-area: tarjeta1;
+    }
+    .tarjeta2 {
+        grid-area: tarjeta2;
+    }
+    .tarjeta3 {
+        grid-area: tarjeta3;
+    }
+    .tarjeta4 {
+        grid-area: tarjeta4;
+    }
+    .tarjeta5 {
+        grid-area: tarjeta5;
+    }
+    .tarjeta6 {
+        grid-area: tarjeta6;
+    }
+    .tarjeta7 {
+        grid-area: tarjeta7;
+    }
+    .tarjeta8 {
+        grid-area: tarjeta8;
+    }
+    .tarjeta9 {
+        grid-area: tarjeta9;
+    }
+    .tarjeta10 {
+        grid-area: tarjeta10;
+    }
+    .tarjeta11 {
+        grid-area: tarjeta11;
+    }
+    .tarjeta12 {
+        grid-area: tarjeta12;
+    }
+}
+@media (max-width: 770px ) {
+.galeriaServicios {
+    display: grid;
+    grid-template-areas:    "tarjeta1 tarjeta2"
+                            "tarjeta3 tarjeta4"
+                            "tarjeta5 tarjeta6"
+                            "tarjeta7 tarjeta8"
+                            "tarjeta9 tarjeta10"
+                            "tarjeta11 tarjeta12";
+    justify-content: space-around;
+    gap: 20px;
         .tarjeta1 {
             grid-area: tarjeta1;
         }
@@ -189,54 +280,6 @@ $red-social: (
         .tarjeta12 {
             grid-area: tarjeta12;
         }
-}
-@media (max-width: 770px ) {
-    .galeriaServicios {
-        display: grid;
-        grid-template-areas:    "tarjeta1 tarjeta2"
-                                "tarjeta3 tarjeta4"
-                                "tarjeta5 tarjeta6"
-                                "tarjeta7 tarjeta8"
-                                "tarjeta9 tarjeta10"
-                                "tarjeta11 tarjeta12";
-        justify-content: space-around;
-        gap: 20px;
-            .tarjeta1 {
-                grid-area: tarjeta1;
-            }
-            .tarjeta2 {
-                grid-area: tarjeta2;
-            }
-            .tarjeta3 {
-                grid-area: tarjeta3;
-            }
-            .tarjeta4 {
-                grid-area: tarjeta4;
-            }
-            .tarjeta5 {
-                grid-area: tarjeta5;
-            }
-            .tarjeta6 {
-                grid-area: tarjeta6;
-            }
-            .tarjeta7 {
-                grid-area: tarjeta7;
-            }
-            .tarjeta8 {
-                grid-area: tarjeta8;
-            }
-            .tarjeta9 {
-                grid-area: tarjeta9;
-            }
-            .tarjeta10 {
-                grid-area: tarjeta10;
-            }
-            .tarjeta11 {
-                grid-area: tarjeta11;
-            }
-            .tarjeta12 {
-                grid-area: tarjeta12;
-            }
     }    
 }
 .tituloMarcas {
@@ -392,8 +435,15 @@ $red-social: (
         text-align: center;
     }
     .formulario {
+        border: 0.5px solid blue;
+        border-radius: 20px;
+        padding: $paddingContenido;
+        padding-top: 10px;
+        background-color: #093ea0e2;
+        color: map-get($map: $colores, $key: textoFooter);
         input {
             width: 300px;
+            text-align: center;
         }
         form {
             .formItem1 {
@@ -454,3 +504,119 @@ $red-social: (
         }
     }    
 }
+.css-button-sliding-to-left--green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #57cc99;
+    color: #57cc99;
+  }
+  .css-button-sliding-to-left--green:hover {
+    color: #fff;
+  }
+  .css-button-sliding-to-left--green:hover:after {
+    width: 100%;
+  }
+  .css-button-sliding-to-left--green:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #57cc99;
+  }
+  .css-button-sliding-to-left--sky {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #4433ff;
+    color: #4433ff;
+  }
+  .css-button-sliding-to-left--sky:hover {
+    color: #fff;
+  }
+  .css-button-sliding-to-left--sky:hover:after {
+    width: 100%;
+  }
+  .css-button-sliding-to-left--sky:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #4433ff;
+  }
+  .css-button-sliding-to-left--rose {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #ff0a78;
+    color: #ff0a78;
+  }
+  .css-button-sliding-to-left--rose:hover {
+    color: #fff;
+  }
+  .css-button-sliding-to-left--rose:hover:after {
+    width: 100%;
+  }
+  .css-button-sliding-to-left--rose:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #ff0a78;
+  }
+
+  .botonesContacto {
+      display: flex;
+      gap: 40px;
+      margin: $marginContenido;
+      .contactoItems {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+  }
