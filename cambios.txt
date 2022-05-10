@@ -3,3 +3,13 @@
 Se agregan mixins en flexbox laterales en archivo index.html
 Se agrega maps de colores para las fuentes en archivo index.html
 Se agregaron keywords y descripciones en cada uno de los archivos
+
+Re entrega.
+
+Se ajusta flexbox en archivos principales
+Se le da formato a formulario de contacto.
+Se agrega sección de botones
+Se cambia el target a _blank en links para redes sociales
+Se ajusta diseño de imágenes para compatibilidad en estructura
+Se agregan mixins 
+Se cambian imágenes en servicios y el formato de las cartas. 
